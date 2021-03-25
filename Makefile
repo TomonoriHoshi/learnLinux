@@ -91,6 +91,16 @@ Resilio:
 	tar xvf resilio-sync_x64.tar.gz -C ~/.resilio
 	echo "FYI: https://github.com/Tomonori12/resilio-pi2"
 
+RstudioServer:
+	sudo apt-get install gdebi-core
+	wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1106-amd64.deb
+	sudo gdebi rstudio-server-1.4.1106-amd64.deb
+
+RShinyServer:
+	sudo su - -c "R -e \"install.packages(c('shiny', 'rmarkdown'), repos='http://cran.rstudio.com/')\""
+	wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.16.958-amd64.deb
+	sudo gdebi shiny-server-1.5.16.958-amd64.deb
+
 ##############################
 #          Utilites          #
 ##############################
@@ -148,12 +158,14 @@ stickynotes:
 	sudo apt install -y indicator-stickynotes
 
 docker:
-	sudo apt-get remove docker docker-engine docker.io containerd runc
 	sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 	echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 	sudo apt update
 	sudo apt install docker-ce docker-ce-cli containerd.io
+
+dropDocker:
+	sudo apt-get remove docker docker-engine docker.io containerd runc
 
 ##############################
 #        developing          #
