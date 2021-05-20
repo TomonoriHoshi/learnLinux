@@ -65,12 +65,12 @@ RStudio13:
 	wget -qO- "https://yihui.org/gh/tinytex/tools/install-unx.sh" | sh
 
 RStudio14:
-	wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1103-amd64.deb
-	sudo gdebi rstudio-1.4.1103-amd64.deb
+	wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1106-amd64.deb
+	sudo gdebi rstudio-1.4.1106-amd64.deb
 	wget -qO- "https://yihui.org/gh/tinytex/tools/install-unx.sh" | sh
 
 Rdepend:
-	sudo apt install libgtk2.0-dev xvfb xauth xfonts-base libxt-dev libxml2-dev curl libcurl4-openssl-dev libssl-dev
+	sudo apt install -y libgtk2.0-dev xvfb xauth xfonts-base libxt-dev libxml2-dev curl libcurl4-openssl-dev libssl-dev
 	sudo apt install -y libgdal-dev libudunits2-dev default-jdk
 
 anaconda:
