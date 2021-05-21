@@ -71,7 +71,7 @@ RStudio14:
 
 Rdepend:
 	sudo apt install -y libgtk2.0-dev xvfb xauth xfonts-base libxt-dev libxml2-dev curl libcurl4-openssl-dev libssl-dev
-	sudo apt install -y libgdal-dev libudunits2-dev default-jdk
+	sudo apt install -y libgdal-dev libudunits2-dev default-jdk gfortran
 
 anaconda:
 	wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
